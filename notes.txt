@@ -32,6 +32,8 @@
 7. Make sure webpack loads postcss ("postcss-loader")
 8. Dev and Build commands, then it should work
 9. import style.css in a file component later, which you might import into index
+10. optional but npm install --save-dev prettier-plugin-tailwindcss to make tailwind classes look better
+
 
 *** different install commands for tailwind v4 which no longer uses CLI commands, PostCSS, etc. ***
 @import "tailwindcss"; automatically handles everything for you
