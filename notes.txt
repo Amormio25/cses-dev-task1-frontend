@@ -1,0 +1,39 @@
+1. After setting up template repo, do npm install to be able to run commands
+2. I commented out reset.css for now since tailwind seems to do the same job and more
+3. Install the required packages for tailwind (with webpack specifically)
+    npm install -D tailwindcss@3 postcss autoprefixer
+    npx tailwindcss init -p <- generating the tailwind config
+4. Configure tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+    module.exports = {
+    content: [
+        "./src/**/*.{html,js}",   // adjust if your files are elsewhere
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+    };
+5. Add Tailwind to yocur CSS entry file
+    If your CSS file is at src/assets/style.css
+
+    Replace its content with:
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+6. Update postcss.config.js
+    module.exports = {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    };
+7. Make sure webpack loads postcss ("postcss-loader")
+8. Dev and Build commands, then it should work
+9. import style.css in a file component later, which you might import into index
+
+*** different install commands for tailwind v4 which no longer uses CLI commands, PostCSS, etc. ***
+@import "tailwindcss"; automatically handles everything for you
+which is why for this task I stuck with tailwind v3 to allow compatibility with webpack
+
