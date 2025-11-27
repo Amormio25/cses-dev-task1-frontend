@@ -2,6 +2,7 @@
 2. I commented out reset.css for now since tailwind seems to do the same job and more
 3. Install the required packages for tailwind (with webpack specifically)
     npm install -D tailwindcss@3 postcss autoprefixer
+    npm install -D postcss-loader
     npx tailwindcss init -p <- generating the tailwind config
 4. Configure tailwind.config.js
 /** @type {import('tailwindcss').Config} */
