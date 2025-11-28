@@ -1,4 +1,4 @@
-# webpack-template
+# About Me
 
 <img src="./src/assets/images/demopic-aboutme.png" width="600" alt="demo pic">
 
